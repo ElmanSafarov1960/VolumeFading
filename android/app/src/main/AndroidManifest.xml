@@ -1,0 +1,74 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:label="Volume Fading"
+        android:name="${applicationName}"
+        android:icon="@mipmap/launcher_icon"  
+        android:roundIcon="@mipmap/launcher_icon">
+
+        <meta-data
+            android:name="io.flutter.embedding.android.EnableImpeller"
+            android:value="false" />
+
+        <service
+            android:name="id.flutter.flutter_background_service.BackgroundService"
+            android:foregroundServiceType="mediaPlayback"
+            android:enabled="true"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver 
+            android:name=".MediaPauseReceiver" 
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.elman.volumefading.PAUSE_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="id.flutter.flutter_background_service.default_notification_icon"
+            android:resource="@drawable/status_icon_manual" />
+
+        <meta-data 
+            android:name="id.flutter.flutter_background_service.notification_channel_id"
+            android:value="volume_fade_manual" />
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />        
+
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+    </queries>
+</manifest>
