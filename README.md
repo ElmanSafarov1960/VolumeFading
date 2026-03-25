@@ -101,9 +101,9 @@ La aplicación reduce suavemente el volumen de los medios, ayudándote a dormir 
 
 ## 📸 Screenshots
 <p align="center">
-  <img src="screenshots/screen_main.png" width="200">
-  <img src="screenshots/screen_timer.png" width="200">
-  <img src="screenshots/screen_active.png" width="200">
+  <img src="Screenshots/screen_main.png" width="200">
+  <img src="Screenshots/screen_timer.png" width="200">
+  <img src="Screenshots/screen_active.png" width="200">
 </p>
 
 ## 🚀 Technical Details
