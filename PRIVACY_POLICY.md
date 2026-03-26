@@ -19,5 +19,8 @@ The app requires specific permissions to function correctly:
 ### 3. Third-Party Services
 The app does not use any third-party services that may collect information used to identify you.
 
-### 4. Contact
-If you have any questions about this Privacy Policy, please contact us via GitHub.
+
+### 4. Contact Us
+### 4. Contact Us
+If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at:
+**elman19.60.07@gmail.com** (вставь сюда свою почту)
