@@ -23,4 +23,4 @@ The app does not use any third-party services that may collect information used 
 ### 4. Contact Us
 ### 4. Contact Us
 If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at:
-**elman19.60.07@gmail.com** (вставь сюда свою почту)
+**elman19.60.07@gmail.com** 
